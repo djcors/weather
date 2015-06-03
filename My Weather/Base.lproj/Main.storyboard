@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="My_Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9LF-e6-hLP">
+                                <rect key="frame" x="16" y="56" width="568" height="21"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddf-PI-rU1">
+                                <rect key="frame" x="16" y="79" width="568" height="51"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Max" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uoI-7a-T80">
+                                <rect key="frame" x="16" y="333" width="33" height="21"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Min" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJ5-8g-wzf">
+                                <rect key="frame" x="147" y="333" width="29" height="21"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbn-8x-B9k">
+                                <rect key="frame" x="16" y="148" width="148" height="153"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="100"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kKB-se-6b1">
+                                <rect key="frame" x="153" y="134" width="167" height="167"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="aQA-pN-1Ri">
+                                <rect key="frame" x="0.0" y="367" width="600" height="226"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="vzD-YO-KIs"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="cbd-vq-WzT"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uoI-7a-T80" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="4Uo-Hq-tTE"/>
+                            <constraint firstItem="9LF-e6-hLP" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="Ljw-Sk-j9N"/>
+                            <constraint firstItem="cJ5-8g-wzf" firstAttribute="top" secondItem="pbn-8x-B9k" secondAttribute="bottom" constant="32" id="Sd9-6r-vAt"/>
+                            <constraint firstItem="cJ5-8g-wzf" firstAttribute="leading" secondItem="uoI-7a-T80" secondAttribute="trailing" constant="98" id="TMx-ox-mZK"/>
+                            <constraint firstItem="9LF-e6-hLP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="UMu-t7-fxK"/>
+                            <constraint firstItem="pbn-8x-B9k" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Ujd-pU-dI8"/>
+                            <constraint firstItem="aQA-pN-1Ri" firstAttribute="top" secondItem="cJ5-8g-wzf" secondAttribute="bottom" constant="13" id="VDY-i7-eh5"/>
+                            <constraint firstItem="uoI-7a-T80" firstAttribute="top" secondItem="pbn-8x-B9k" secondAttribute="bottom" constant="32" id="XS1-Ho-YhN"/>
+                            <constraint firstAttribute="width" secondItem="aQA-pN-1Ri" secondAttribute="width" id="YE5-1b-hzh"/>
+                            <constraint firstItem="9LF-e6-hLP" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="36" id="cQN-Gi-Fbg"/>
+                            <constraint firstItem="ddf-PI-rU1" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="hXr-dQ-a97"/>
+                            <constraint firstItem="ddf-PI-rU1" firstAttribute="top" secondItem="9LF-e6-hLP" secondAttribute="bottom" constant="2" id="hhs-WI-NLe"/>
+                            <constraint firstItem="pbn-8x-B9k" firstAttribute="top" secondItem="ddf-PI-rU1" secondAttribute="bottom" constant="18" id="lsu-xL-rB2"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="aQA-pN-1Ri" secondAttribute="bottom" id="m8X-fd-NmV"/>
+                            <constraint firstItem="aQA-pN-1Ri" firstAttribute="top" secondItem="uoI-7a-T80" secondAttribute="bottom" constant="13" id="q2G-SL-OSU"/>
+                            <constraint firstItem="ddf-PI-rU1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="rJW-q1-MNr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Table" destination="aQA-pN-1Ri" id="fUG-Qb-uNE"/>
+                        <outlet property="ciudad" destination="9LF-e6-hLP" id="jRl-Qe-prW"/>
+                        <outlet property="climaLabel" destination="ddf-PI-rU1" id="cLD-P4-VcP"/>
+                        <outlet property="iconImg" destination="kKB-se-6b1" id="S4Y-Vl-o0e"/>
+                        <outlet property="maxLabel" destination="uoI-7a-T80" id="CfA-RH-hXk"/>
+                        <outlet property="minLabel" destination="cJ5-8g-wzf" id="lyn-MX-nqk"/>
+                        <outlet property="tempLabel" destination="pbn-8x-B9k" id="D7Z-HE-I79"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
